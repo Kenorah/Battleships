@@ -51,7 +51,7 @@ public static class GameResources
 		NewSound("Sink", "sink.wav");
 		NewSound("Siren", "siren.wav");
 		NewSound("Miss", "watershot.wav");
-		NewSound("Winner", "winner.wav");
+		NewSound("Winner", "FFVII_Victory_Fanfare.wav");
 		NewSound("Lose", "lose.wav");
 	}
 
