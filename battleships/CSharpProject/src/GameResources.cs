@@ -1,4 +1,3 @@
-
 using Microsoft.VisualBasic;
 using System;
 using System.Collections;
@@ -15,7 +14,7 @@ public static class GameResources
 		NewFont("ArialLarge", "arial.ttf", 80);
 		NewFont("Courier", "cour.ttf", 14);
 		NewFont("CourierSmall", "cour.ttf", 8);
-		NewFont("Menu", "ffaccess.ttf", 8);
+		NewFont("Menu", "Bevan.ttf", 8);
 	}
 
 	private static void LoadImages()
@@ -52,7 +51,7 @@ public static class GameResources
 		NewSound("Sink", "sink.wav");
 		NewSound("Siren", "siren.wav");
 		NewSound("Miss", "watershot.wav");
-		NewSound("Winner", "winner.wav");
+		NewSound("Winner", "FFVII_Victory_Fanfare.wav");
 		NewSound("Lose", "lose.wav");
 	}
 
