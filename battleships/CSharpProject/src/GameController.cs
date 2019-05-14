@@ -15,6 +15,7 @@ using SwinGameSDK;
 public static class GameController
 {
 
+    private static bool _musicoff;
 	private static BattleShipsGame _theGame;
 	private static Player _human;
 
@@ -23,6 +24,18 @@ public static class GameController
 	private static Stack<GameState> _state = new Stack<GameState>();
 
 	private static AIOption _aiSetting;
+
+	public static bool SoundOff
+	{
+		get
+		{
+			return _musicoff;
+		}
+		set
+		{
+			_musicoff = value;
+		}
+	}
 	/// <summary>
 	/// Returns the current state of the game, indicating which screen is
 	/// currently being used
@@ -272,6 +285,20 @@ public static class GameController
 	{
 		//Read incoming input events
 		SwinGame.ProcessEvents();
+
+		if (SwinGame.KeyTyped (KeyCode.vk_SPACE))
+		{
+			if (SoundOff)
+			{
+				SwinGame.PauseMusic ();
+			}
+			else
+			{
+				SwinGame.ResumeMusic ();
+			}
+
+			SoundOff = !SoundOff;
+		}
 
 		switch (CurrentState) {
 			case GameState.ViewingMainMenu:
